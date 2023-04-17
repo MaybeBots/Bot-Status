@@ -98,8 +98,14 @@ git clone https://github.com/Surajx21/Bot-Status && cd Bot-Status
 ```
 pip3 install -U -r requirements.txt
 ```
-
-4. Run the script using Python 3:
+4. Create .env using example.env
+```
+cp example.env .env
+```
+5. Now open the .env file using **vi .env**
+6. Edit the vars, by pressing **I**  on the keyboard
+7. After editing save the file using **ctrl + c** then **:wq**
+8. Run the script using Python 3:
 ```
 python3 main.py
 ```
