@@ -25,7 +25,7 @@
 
 ## Tutorial 
 
-1. Add the following code snippet at the beginning of your `__init.py__` file to define the `start_time` variable:
+1. Add the following code snippet at the beginning of your `__init__.py` file to define the `start_time` variable:
 ```python
 import time
 
