@@ -78,7 +78,7 @@ To deploy on a Heroku, follow these steps:
 
 2. Click the Deploy button below 
     
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MaybeBots/Bot-Status)
 
 ### Vps
 
