@@ -25,7 +25,7 @@ MESSAGE_ID = int(os.getenv("MESSAGE_ID"))
 TIME_ZONE = os.getenv("TIME_ZONE")
 OWNER_ID = int(os.getenv("OWNER_ID"))
 
-
+bot.start()
 
 
 async def main():
