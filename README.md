@@ -91,7 +91,7 @@ sudo apt-get update && sudo apt-get upgrade -y
 
 2. Clone the repository and navigate to the project directory:
 ```
-git clone https://github.com/Surajx21/Bot-Status && cd Bot-Status
+git clone https://github.com/maybebots/Bot-Status && cd Bot-Status
 ```
 
 3. Install the required packages:
