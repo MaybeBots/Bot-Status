@@ -3,24 +3,27 @@ import asyncio
 import datetime
 import pytz
 
+from dotenv import load_dotenv
 from pyrogram import Client
 from pyrogram.errors import FloodWait
 
+load_dotenv()
+
 app = Client(name="st_userbot",
-             api_id=int(os.environ["API_ID"]),
-             api_hash=os.environ["API_HASH"],
-             session_string=os.environ["SESSION_STRING"])
+             api_id=int(os.getenv("API_ID")),
+             api_hash=os.getenv("API_HASH"),
+             session_string=os.getenv("SESSION_STRING")
 
 bot = Client(name="st_bot",
-             api_id=int(os.environ["API_ID"]),
-             api_hash=os.environ["API_HASH"],
-             bot_token=os.environ["BOT_TOKEN"])
+             api_id=int(os.getenv("API_ID")),
+             api_hash=os.getenv("API_HASH"),
+             bot_token=os.getenv("BOT_TOKEN")
 
-BOT_LIST = [x.strip() for x in os.environ.get("BOT_LIST").split(' ')]
-CHANNEL_OR_GROUP_ID = int(os.environ["CHANNEL_OR_GROUP_ID"])
-MESSAGE_ID = int(os.environ["MESSAGE_ID"])
-TIME_ZONE = os.environ["TIME_ZONE"]
-OWNER_ID = int(os.environ["OWNER_ID"])
+BOT_LIST = [x.strip() for x in os.getenv("BOT_LIST").split(' ')]
+CHANNEL_OR_GROUP_ID = int(os.getenv("CHANNEL_OR_GROUP_ID"))
+MESSAGE_ID = int(os.getenv("MESSAGE_ID"))
+TIME_ZONE = os.getenv("TIME_ZONE")
+OWNER_ID = int(os.getenv("OWNER_ID"))
 
 bot.start()
 
