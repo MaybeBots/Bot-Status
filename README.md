@@ -33,7 +33,7 @@ start_time = time.time()
 
 ```
 
-2. Now Copy the following code and add it into your repository:
+2. Now Copy the following code and add it into your repository ( In plugins directory or wherever your plugins exists):
 ```python
 import psutil
 import time
