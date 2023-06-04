@@ -17,7 +17,7 @@
 2. `API_HASH` : Telegram API_ID, get it from my.telegram.org/apps
 3. `SESSION_STRING` : A valid Pyrogram session string, get it from [@MaybexSessionBot](https://t.me/MaybexSessionBot)
 4. `BOT_TOKEN` : A valid bot token, get it from [@BotFather](https://t.me/BotFather)
-5. `BOT_LIST` : Your bot username list without '@' (Example: Maybexsessionbot, MaybexHackBot)
+5. `BOT_LIST` : Your bot username list without '@' (Example: Maybexsessionbot MaybexHackBot)
 6. `CHANNEL_OR_GROUP_ID` : Your channel's or group's Telegram id (Example: -1001246808642)
 7. `MESSAGE_ID` : Telegram id of message from your channel or group (Example: 10)
 8. `OWNER_ID` : Owner id (Example: 1357907531 2468097531 3579864213)
