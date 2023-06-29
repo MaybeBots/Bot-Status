@@ -23,7 +23,10 @@ BOT_LIST = [x.strip() for x in os.getenv("BOT_LIST").split(' ')]
 CHANNEL_OR_GROUP_ID = int(os.getenv("CHANNEL_OR_GROUP_ID"))
 MESSAGE_ID = int(os.getenv("MESSAGE_ID"))
 TIME_ZONE = os.getenv("TIME_ZONE")
-OWNER_ID = int(os.getenv("OWNER_ID"))
+
+OWNER_ID = None
+if id:=os.getenv("OWNER_ID"):
+    OWNER_ID = int(id)
 
 bot.start()
 
