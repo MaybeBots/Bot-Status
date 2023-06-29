@@ -42,12 +42,12 @@ async def main():
                     async for x in messages:
                         msg = x.text
                     if msg == "/statusbot":
-                        TEXT += f"\n\n**🤖-[{ok.first_name}](tg://openmessage?user_id={ok.id}): ❌ Offline**"
-                        await bot.send_message(OWNER_ID, f'Alert {ok.first_name} is offline 💀')
-                        await app.read_chat_history(bots)
+                        TEXT += f"\n\n🤖 - **[{ok.first_name}](tg://openmessage?user_id={ok.id}): ❌ Offline**"
+                        if OWNER_ID:
+                            await bot.send_message(OWNER_ID, f'Alert {ok.first_name} is offline 💀')
                     else:
-                        TEXT += f"\n\n**🤖-[{ok.first_name}](tg://openmessage?user_id={ok.id}): ✅ Online\n┗{msg}**"
-                        await app.read_chat_history(bots)
+                        TEXT += f"\n\n🤖 - **[{ok.first_name}](tg://openmessage?user_id={ok.id}): ✅ Online**\n ┗ **{msg}**"
+                    await app.read_chat_history(bots)
                 except FloodWait as e:
                     await asyncio.sleep(e.value)
             time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
