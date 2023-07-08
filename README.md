@@ -23,6 +23,9 @@
 8. `OWNER_ID` : Owner id (Example: 1357907531 2468097531 3579864213)
 9. `TIME_ZONE`: Your time zone (Example: Asia/Kolkata)
 
+## Example
+![image](https://graph.org/file/932074b8030bf0f5c5506.jpg)
+
 ## Tutorial 
 
 1. Add the following code snippet at the beginning of your `__init__.py` file to define the `start_time` variable:
