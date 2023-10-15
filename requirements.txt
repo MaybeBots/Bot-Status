@@ -1,4 +1,0 @@
-pyrogram
-tgcrypto
-pytz==2021.3
-python-dotenv
