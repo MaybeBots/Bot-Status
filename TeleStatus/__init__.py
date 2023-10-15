@@ -1,8 +1,6 @@
 import time
 import psutil
-from pyrogram import Client, filters
-from pyrogram.handlers import MessageHandler
-
+from telethon import TelegramClient, events
 
 # TeamUltroid/Ultroid
 def time_formatter(milliseconds):
@@ -22,16 +20,16 @@ def time_formatter(milliseconds):
     return tmp
 
 
-class PyroClient(Client):
+class TeleClient(TelegramClient):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.start_time = time.time()
-        self.add_handler(MessageHandler(
-            self.status, filters=filters.private & filters.command("statusbot")))
+        self.add_event_handler(self.status, events.NewMessage(
+            pattern="/statusbot", func=lambda e: e.is_private))
 
     @staticmethod
-    async def status(client, message):
-        uptime = time_formatter((time.time() - client.start_time) * 1000)
+    async def status(event:events.NewMessage.Event):
+        uptime = time_formatter((time.time() - event.client.start_time) * 1000)
         cpu = psutil.cpu_percent()
         TEXT = f"UPTIME: {uptime} | CPU: {cpu}%"
-        await message.reply(TEXT)
+        await event.reply(TEXT)
