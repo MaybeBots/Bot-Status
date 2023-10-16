@@ -28,6 +28,55 @@
 
 ## Tutorial 
 
+### Method 1 (Easy)
+1. Install this using pip3 in whichever bot(pyrogram or telethon) you want to know the status
+
+**If Pyrogram**
+```
+pip3 install git+https://github.com/maybebots/bot-status.git@pyro
+```
+
+**If Telethon**
+```
+pip3 install git+https://github.com/maybebots/bot-status.git@tele
+```
+
+2. Import the Client Class with
+
+**If Pyrogram**
+```python
+from PyroStatus import PyroClient
+```
+
+**If Telethon**
+```python
+from TeleStatus import TeleClient
+```
+
+3. Just replace the normal Client with this client. For eg:
+
+**If Pyrogram**
+```python
+app = PyroClient(
+    name="bot",
+    api_id=69696,
+    api_hash="",
+    bot_token=""
+)
+```
+
+**If Telethon**
+```python
+app = TeleClient(
+    "bot",
+    api_id,
+    api_hash,
+).start(bot_token="")
+```
+4. Thats it now just deploy this repo!
+
+### Method 2 (Manual)
+
 1. Add the following code snippet at the beginning of your `__init__.py` file to define the `start_time` variable:
 ```python
 import time
